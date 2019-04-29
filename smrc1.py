@@ -23,7 +23,8 @@ print '''
       '''
 
 app = web.application(urls,globals(),autoreload=False)
-    
+
+hornby.set_debug(True)    
 hornby.connection_open('/dev/ttyACM0',9600)
 t1 = hornby.Train(3)
 a1 = hornby.Accessory(0,2)
